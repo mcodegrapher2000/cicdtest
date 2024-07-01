@@ -26,7 +26,7 @@ jobs:
           python3 -m pip install --upgrade pip
           pip install -r requirements'
       - name: Deploy to EC2
-        uses: appleboy/ssh-action@main
+        uses: actions/checkout@v3
         with: 
           host: ${{ secrets.EC2_HOST }}
           username: ${{ secrets.EC2_USERNAME }}
